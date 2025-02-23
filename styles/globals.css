@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Player customization */
+.rhap_container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.rhap_play-pause-button {
+  color: #3b82f6 !important;
+}
+
+.rhap_progress-filled {
+  background-color: #3b82f6 !important;
+}
+
+.rhap_progress-indicator {
+  background: #3b82f6 !important;
+}
+
+/* Progress bar customization */
+.rhap_progress-section {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  height: 20px;
+}
+
+.rhap_progress-container {
+  flex: 1 1 auto;
+  margin: 0 4px;
+  height: 4px;
+}
+
+.rhap_progress-bar {
+  height: 100%;
+  position: relative;
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.rhap_progress-filled {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: #3b82f6 !important;
+  border-radius: 2px;
+}
+
+.rhap_download-progress {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+}
+
+.rhap_progress-indicator {
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 3;
+  margin-left: -6px;
+  top: -4px;
+}
+
+.rhap_volume-button {
+  color: #3b82f6 !important;
+}
+
+.rhap_volume-bar {
+  background-color: #e5e7eb !important;
+}
+
+.rhap_volume-indicator {
+  background: #3b82f6 !important;
+}
+
+/* Time display customization */
+.rhap_time {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #4b5563 !important;
+  min-width: 40px;
+  text-align: center;
+}
+
+.rhap_total-time {
+  margin-left: 8px;
+}
+
+.rhap_current-time {
+  margin-right: 8px;
+}
