@@ -141,7 +141,7 @@ const MusicPlayer = ({ currentSong, allSongs }) => {
 
   return (
     <motion.div 
-      className="fixed bottom-0 left-0 right-0 bg-white shadow-lg"
+      className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg"
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", duration: 0.5 }}
@@ -149,12 +149,16 @@ const MusicPlayer = ({ currentSong, allSongs }) => {
       <div className="max-w-4xl mx-auto p-4">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-4">
-            <IoMdMusicalNote className="text-blue-500 text-xl" />
-            <span className="font-medium">{playlist[currentIndex]?.name}</span>
+            <IoMdMusicalNote className="text-blue-500" />
+            <span className="font-medium dark:text-white">{playlist[currentIndex]?.name}</span>
           </div>
           <button 
             onClick={toggleRepeatMode}
-            className={`p-2 rounded-full ${repeatMode !== 'none' ? 'text-blue-500' : 'text-gray-500'}`}
+            className={`p-2 rounded-full ${
+              repeatMode !== 'none' 
+                ? 'text-blue-500 dark:text-blue-400' 
+                : 'text-gray-500 dark:text-gray-400'
+            }`}
           >
             {repeatMode === 'one' ? <TbRepeatOnce size={20} /> : <TbRepeat size={20} />}
           </button>
@@ -163,7 +167,7 @@ const MusicPlayer = ({ currentSong, allSongs }) => {
           ref={playerRef}
           src={playlist[currentIndex]?.path}
           autoPlay
-          className="rounded-lg"
+          className="rounded-lg dark:bg-gray-700"
           showSkipControls={true}
           showJumpControls={true}
           onClickPrevious={handleClickPrevious}

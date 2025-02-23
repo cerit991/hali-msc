@@ -97,3 +97,31 @@
 .rhap_current-time {
   margin-right: 8px;
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .rhap_container {
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  .rhap_time {
+    color: #e5e7eb !important;
+  }
+
+  .rhap_progress-bar {
+    background: #4b5563 !important;
+  }
+
+  .rhap_download-progress {
+    background-color: #374151 !important;
+  }
+
+  .rhap_volume-bar {
+    background-color: #4b5563 !important;
+  }
+
+  .rhap_button-clear {
+    color: #e5e7eb !important;
+  }
+}
